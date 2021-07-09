@@ -2,7 +2,7 @@
 
 ![Image Title](https://raw.githubusercontent.com/iondrimba/images/master/wood-toy.avif)
 
-## [Demo](https://iondrimba.github.io/wood-toy/public/index.html)
+## [Demo](https://iondrimba.github.io/wood-toy/public/)
 
 ## Credits
 
