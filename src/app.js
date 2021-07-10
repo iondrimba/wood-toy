@@ -61,7 +61,7 @@ class App {
 
   createCamera() {
     this.camera = new THREE.PerspectiveCamera(20, this.width / this.height, 1, 1000);
-    this.camera.position.set(0, 20, 60);
+    this.camera.position.set(20, 20, 80);
 
     this.scene.add(this.camera);
   }
@@ -164,7 +164,7 @@ class App {
   addFloorGrid() {
     const size = 400;
     const divisions = size;
-    const grid = new THREE.GridHelper(size, divisions);
+    const grid = new THREE.GridHelper(size, divisions, '#888888');
 
     grid.position.set(0, this.floor.position.y, 0);
 
