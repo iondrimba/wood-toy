@@ -7,12 +7,12 @@ class Sphere {
 
   static loadTextures() {
     const urls = [
-      'assets/envmap/posx.jpg',
-      'assets/envmap/negx.jpg',
-      'assets/envmap/posy.jpg',
-      'assets/envmap/negy.jpg',
-      'assets/envmap/posz.jpg',
-      'assets/envmap/negz.jpg'
+      'assets/envmap/posx.avif',
+      'assets/envmap/negx.avif',
+      'assets/envmap/posy.avif',
+      'assets/envmap/negy.avif',
+      'assets/envmap/posz.avif',
+      'assets/envmap/negz.avif'
     ];
 
     Sphere.texture = new THREE.CubeTextureLoader().load(urls);

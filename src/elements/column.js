@@ -19,11 +19,11 @@ class Column {
     material.aoMapIntensity = .5;
     material.displacementScale = 0;
     material.displacementBias = 0;
-    material.aoMap = new THREE.TextureLoader().load('assets/roughwood/ambientOcclusion.jpg');
+    material.aoMap = new THREE.TextureLoader().load('assets/roughwood/ambientOcclusion.avif');
     material.displacementMap = new THREE.TextureLoader().load('assets/roughwood/height.png');
-    material.roughnessMap = new THREE.TextureLoader().load('assets/roughwood/roughness.jpg');
-    material.normalMap = new THREE.TextureLoader().load('assets/roughwood/normal.jpg');
-    material.map = new THREE.TextureLoader().load('assets/roughwood/basecolor.jpg');
+    material.roughnessMap = new THREE.TextureLoader().load('assets/roughwood/roughness.avif');
+    material.normalMap = new THREE.TextureLoader().load('assets/roughwood/normal.avif');
+    material.map = new THREE.TextureLoader().load('assets/roughwood/basecolor.avif');
     material.normalScale = new THREE.Vector2(6, 2);
 
     material.map.wrapS = THREE.RepeatWrapping;

@@ -20,11 +20,11 @@ class Row {
     material.aoMapIntensity = .5;
     material.displacementScale = 0;
     material.displacementBias = 0;
-    material.aoMap = new THREE.TextureLoader().load('assets/plywood/ambientOcclusion.jpg');
-    material.displacementMap = new THREE.TextureLoader().load('assets/plywood/height.png');
-    material.roughnessMap = new THREE.TextureLoader().load('assets/plywood/roughness.jpg');
-    material.normalMap = new THREE.TextureLoader().load('assets/plywood/normal.jpg');
-    material.map = new THREE.TextureLoader().load('assets/plywood/basecolor.jpg');
+    material.aoMap = new THREE.TextureLoader().load('assets/plywood/ambientOcclusion.avif');
+    material.displacementMap = new THREE.TextureLoader().load('assets/plywood/height.avif');
+    material.roughnessMap = new THREE.TextureLoader().load('assets/plywood/roughness.avif');
+    material.normalMap = new THREE.TextureLoader().load('assets/plywood/normal.avif');
+    material.map = new THREE.TextureLoader().load('assets/plywood/basecolor.avif');
 
     material.normalScale = new THREE.Vector2(1.5, 0);
     material.map.wrapS = THREE.RepeatWrapping;
