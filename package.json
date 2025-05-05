@@ -22,6 +22,10 @@
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
   },
+  "engines": {
+    "node": "15.x.x",
+    "npm": "7.x.x"
+  },
   "scripts": {
     "start": "node --trace-deprecation ./node_modules/.bin/webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",

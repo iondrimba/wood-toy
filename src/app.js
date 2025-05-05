@@ -34,6 +34,7 @@ class App {
   }
 
   setup() {
+    this.lastTime = 0;
     this.debug = false;
     this.width = window.innerWidth;
     this.height = window.innerHeight;
@@ -402,18 +403,20 @@ class App {
   }
 
   animate() {
+    var currentTime = Date.now();
     this.stats.begin();
     this.renderer.render(this.scene, this.camera);
+
+    requestAnimationFrame(this.animate.bind(this));
 
     if (!this.cameraAutoAnimate) {
       this.orbitControl.update();
     }
-
-    // physics loop
-    if (this.physics.lastTime !== undefined) {
+    
+    if (currentTime - this.lastTime > 1000 / 70) {
       this.debug && this.cannonDebugRenderer.update();
       const dt = (this.physics.time - this.physics.lastTime) / 1000;
-      this.world.step(this.physics.fixedTimeStep, dt, this.physics.maxSubSteps);
+      this.world.step(1 / 60, dt, 3);
 
       if (this.cameraAutoAnimate) {
         const { x, y, z } = this.dummyCameraTarget.position;
@@ -425,13 +428,13 @@ class App {
       this.spheres.map((sphere) => {
         sphere.mesh.position.copy(sphere.mesh.body.position);
         sphere.mesh.quaternion.copy(sphere.mesh.body.quaternion);
-      })
+      });
+
+      this.lastTime = Date.now();
     }
 
+    this.renderer.render(this.scene, this.camera);
     this.stats.end();
-    this.physics.lastTime = this.physics.time;
-
-    requestAnimationFrame(this.animate.bind(this));
   }
 
   addWindowListeners() {
